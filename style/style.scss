@@ -9,32 +9,38 @@
 @import "./mixin";
 @import "./aside";
 @import "./main";
+@import "./player";
 
 
 * {
-          margin: 0;
-          padding: 0;
-          box-sizing: border-box;
-          text-decoration: none;
-          border: none;
-          outline: none;
-        }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+a {
+  white-space: nowrap;
+  color: $textColor;
+  border-radius: 10px;
+  transition: all 0.3s;
+}
 
-        body {
-          font-family: "Poppins", sans-serif;
-          background-color: black;
-          color: $textColor;
-          height: 100vh;
-          padding: 20px;
-          overflow: hidden;
-        }
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: black;
+  color: $textColor;
+  height: 100vh;
+  padding: 20px;
+  overflow: hidden;
+}
 
-       
 .layout {
-          display: flex;
-          gap: 20px;
-          height: calc(100vh - 120px);
-        }
+  display: flex;
+  gap: 20px;
+  height: calc(100vh - 120px);
+}
         
 
 

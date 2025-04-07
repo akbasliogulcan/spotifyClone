@@ -48,3 +48,23 @@ ui.form.addEventListener("submit", async (e) => {
 });
 
 
+//!play ikonuna tıklanıldığında şarkıyı oynatma özelliği sağlayan fonksiyon
+ui.list.addEventListener("click", (e) => {
+
+          //liste içerisindeki play ikonuna tıklanıldığında mzik çal
+          console.log(e.target);
+          //*şarkıyı oynatmak için gerekli kodlar buraya yazılacak
+          if (e.target.className == 'play') {
+                    console.log("şarkı çaşıyor");
+                    //play ikonunun kapsayıcısı olan carda eriş  (parentelement.parentElement)  çünkü play ikonu cardın içerisinde yer alıyor
+                    const card = (e.target.parentElement.parentElement);
+
+                    //carda atanan data özelliklerine (image,title,subtitle,mp3) eriş
+                    const songData = card.dataset;
+
+                    //player alanını dinamik oalrak renderla
+                    ui.renderPlayer(songData);
+
+          }
+
+});
